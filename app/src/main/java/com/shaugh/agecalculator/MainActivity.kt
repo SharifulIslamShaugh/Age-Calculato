@@ -82,13 +82,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         if (v == btnCalculate) {
             ivQuestion.clearAnimation()
-            ivQuestion.visibility = View.GONE
+            ivQuestion.visibility = View.INVISIBLE
             yourAge = Period.between(birthDate, todayDate)
             tvAgeYear.text = yourAge.years.toString()
             tvAgeMonth.text = yourAge.months.toString()
             tvAgeDay.text = yourAge.days.toString()
             when {
-                yourAge.years < 21 -> {
+                yourAge.years < 0 -> {
+                    ivAgeWise.setImageResource(R.drawable.negetive)
+                    animation = AnimationUtils.loadAnimation(this, R.anim.bounce_anim)
+                    ivAgeWise.startAnimation(animation)
+                }
+                yourAge.years in 0..20 -> {
                     ivAgeWise.setImageResource(R.drawable.little)
                     animation = AnimationUtils.loadAnimation(this, R.anim.bounce_anim)
                     ivAgeWise.startAnimation(animation)
@@ -98,7 +103,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     animation = AnimationUtils.loadAnimation(this, R.anim.bounce_anim)
                     ivAgeWise.startAnimation(animation)
                 }
-                else -> {
+                yourAge.years > 40 -> {
                     ivAgeWise.setImageResource(R.drawable.old)
                     animation = AnimationUtils.loadAnimation(this, R.anim.bounce_anim)
                     ivAgeWise.startAnimation(animation)
