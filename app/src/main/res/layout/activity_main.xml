@@ -216,10 +216,110 @@
         android:layout_marginTop="-20dp"
         android:src="@drawable/mr" />
 
+    <LinearLayout
+        android:id="@+id/lln5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnMore"
+        android:layout_below="@+id/llnAll"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/lln_background"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvTotalYears"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:text="Total Years"
+                android:textColor="#4269f5"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTotalYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/tvTotalYears"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="50dp"
+                android:padding="6dp"
+                android:text="0"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTotalMonths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTotalYears"
+                android:padding="6dp"
+                android:text="Total Months"
+                android:textColor="#4269f5"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTotalMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTotalYear"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="50dp"
+                android:padding="6dp"
+                android:text="0"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTotalDays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTotalMonths"
+                android:padding="6dp"
+                android:text="Total Days"
+                android:textColor="#4269f5"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTotalDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTotalMonth"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="50dp"
+                android:padding="6dp"
+                android:text="0"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
     <Button
+        android:id="@+id/btnMore"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:text="More Details"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnLess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Less Details"
+        android:textAlignment="center"
+        android:visibility="gone" />
 </RelativeLayout>
